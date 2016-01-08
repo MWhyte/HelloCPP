@@ -21,12 +21,18 @@ int main() {
     cout << "What is the Tomatometer rating for " << movie << "?" << endl;
     cin >> tomatometer;
 
-
-
     // calculate average
-    int averageScore = (metascore + tomatometer) / 2;
-
+    double averageScore = (metascore + tomatometer) / 2;
     cout << "Average score is " << averageScore << endl;
+
+    // watch out for int calc
+    double unroundedAverageScore = (double)(metascore + tomatometer) / 2;
+    cout << "Average score is " << unroundedAverageScore << endl;
+
+    // watch out for int calc
+    double unroundedAverageScore2 = (metascore + tomatometer) / 2.0;
+    cout << "Average score is " << unroundedAverageScore2 << endl;
+
 
     return 0;
 }
