@@ -1,27 +1,51 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main() {
 
-    double x = 5.25;
-    int y;
-    y = x;      // casting down to a smaller datatype is allowed
-    cout << y << endl;  // value is truncated
+    // relational operators
+    cout << (10 > 6) << endl;
+    cout << (10 < 6) << endl;
+    cout << (10 <= 10) << endl;
+    cout << (10 >= 10) << endl;
 
-    // explicit casting
-    y = (int)x;
-    cout << y << endl;
+    cout << (10 == 10) << endl;
+    cout << (10 != 10) << endl;
 
-    x = y /10;
-    cout << x << endl; // ??  5/10 should be 0.5. but this is integer division
+    string a = "Hi";
+    string b = "hi";
+    string c = "hi";
 
-    x = (double) y / 10; // casting required if dividing by an int. Now doing floating point division
-    cout << x << endl;
+    cout << (a == b) << endl;
+    cout << (b == b) << endl;
+    cout << (b == c) << endl;
 
-    x = y / 10.0; // or divide by a double
-    cout << x << endl;
+    cout << ('C' < 'A') << endl;
+    cout << ('C' > 'A') << endl;
+
+    // boolean operators
+    // and
+    cout << (true && true) << endl;
+    cout << (true && false) << endl;
+    cout << (false && true) << endl;
+    cout << (false && false) << endl;
+
+    // or
+    cout << (true || true) << endl;
+    cout << (true || false) << endl;
+    cout << (false || true) << endl;
+    cout << (false || false) << endl;
+
+    // xor
+    cout << (true ^ true) << endl;
+    cout << (true ^ false) << endl;
+    cout << (false ^ true) << endl;
+    cout << (false ^ false) << endl;
+
+    // not
+    cout << (!false) << endl;
+    cout << (!true) << endl;
 
     return 0;
 }
