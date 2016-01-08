@@ -5,34 +5,23 @@ using namespace std;
 
 int main() {
 
-    // Get the name of the movie
-    string movie = "";
-    cout << "What is the name of the movie:" << endl;
-    getline(cin, movie);
+    double x = 5.25;
+    int y;
+    y = x;      // casting down to a smaller datatype is allowed
+    cout << y << endl;  // value is truncated
 
+    // explicit casting
+    y = (int)x;
+    cout << y << endl;
 
-    // Get Metascore
-    int metascore = 0;
-    cout << "What is the metascore rating for " << movie << "?" << endl;
-    cin >> metascore;
+    x = y /10;
+    cout << x << endl; // ??  5/10 should be 0.5. but this is integer division
 
-    // Get Tomatometer score
-    int tomatometer = 0;
-    cout << "What is the Tomatometer rating for " << movie << "?" << endl;
-    cin >> tomatometer;
+    x = (double) y / 10; // casting required if dividing by an int. Now doing floating point division
+    cout << x << endl;
 
-    // calculate average
-    double averageScore = (metascore + tomatometer) / 2;
-    cout << "Average score is " << averageScore << endl;
-
-    // watch out for int calc
-    double unroundedAverageScore = (double)(metascore + tomatometer) / 2;
-    cout << "Average score is " << unroundedAverageScore << endl;
-
-    // watch out for int calc
-    double unroundedAverageScore2 = (metascore + tomatometer) / 2.0;
-    cout << "Average score is " << unroundedAverageScore2 << endl;
-
+    x = y / 10.0; // or divide by a double
+    cout << x << endl;
 
     return 0;
 }
