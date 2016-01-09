@@ -1,22 +1,32 @@
 #include <iostream>
+#include <stdexcept>
 
 using namespace std;
 
-// returning nothing
-void printName(string name){
-    cout << name << endl;
-}
+int toysPerKids(int toys, int kids){
+    if (kids == 0)
+        throw std::overflow_error("Divide by zero exception");
 
-// returning a value of type int
-int volumeOfRectanglePrism(int length, int width, int depth){
-    return length * width * depth;
+    return toys / kids;
 }
 
 int main() {
 
-    printName("Michael");
+    int toys;
+    int kids;
 
-    cout << volumeOfRectanglePrism(10, 2, 3) << endl;
+    cout << "Enter the number of toys:" << endl;
+    cin >> toys;
+
+    cout << "Enter the number of kids:" << endl;
+    cin >> kids;
+
+    try {
+        int result = toysPerKids(toys, kids);
+        cout << "There are " << result << " toys per kid" << endl;
+    } catch (std::overflow_error e){
+        cout << "Something bad happened: " << e.what();
+    }
 
     return 0;
 }
