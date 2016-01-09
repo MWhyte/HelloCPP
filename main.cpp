@@ -4,48 +4,47 @@ using namespace std;
 
 int main() {
 
-    // relational operators
-    cout << (10 > 6) << endl;
-    cout << (10 < 6) << endl;
-    cout << (10 <= 10) << endl;
-    cout << (10 >= 10) << endl;
+    int x = 10;
+    int y = 20;
 
-    cout << (10 == 10) << endl;
-    cout << (10 != 10) << endl;
 
-    string a = "Hi";
-    string b = "hi";
-    string c = "hi";
+    // if
+    if (x == 10){
+        cout << "X equals ten" << endl;
+    }
 
-    cout << (a == b) << endl;
-    cout << (b == b) << endl;
-    cout << (b == c) << endl;
+    // if else
+    if (x == 10){
+        cout << "X equals ten" << endl;
+    } else {
+        cout << "X does not equal ten" << endl;
+    }
 
-    cout << ('C' < 'A') << endl;
-    cout << ('C' > 'A') << endl;
 
-    // boolean operators
-    // and
-    cout << (true && true) << endl;
-    cout << (true && false) << endl;
-    cout << (false && true) << endl;
-    cout << (false && false) << endl;
+    // nested if
+    if (x == 10){
+        if (y == 20){
+            cout << "X equals ten and y equals 20" << endl;
+        } else {
+            cout << "X equals ten and y does not equal 20" << endl;
+        }
+    } else {
+        if (y == 20){
+            cout << "X does not equal ten and y equals 20" << endl;
+        } else {
+            cout << "X does not equal ten and y doesn not equal 20" << endl;
+        }
+    }
 
-    // or
-    cout << (true || true) << endl;
-    cout << (true || false) << endl;
-    cout << (false || true) << endl;
-    cout << (false || false) << endl;
 
-    // xor
-    cout << (true ^ true) << endl;
-    cout << (true ^ false) << endl;
-    cout << (false ^ true) << endl;
-    cout << (false ^ false) << endl;
+    // operators and no brackets
+    if (x==10 && y==20)
+        cout << "X equals ten and y equals 20" << endl;
 
-    // not
-    cout << (!false) << endl;
-    cout << (!true) << endl;
+
+    if (x==10 || y==20)
+        cout << "X equals ten OR y equals 20" << endl;
+
 
     return 0;
 }
