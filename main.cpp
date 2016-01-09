@@ -2,29 +2,21 @@
 
 using namespace std;
 
+// returning nothing
+void printName(string name){
+    cout << name << endl;
+}
+
+// returning a value of type int
+int volumeOfRectanglePrism(int length, int width, int depth){
+    return length * width * depth;
+}
+
 int main() {
 
-    int x = 0;
+    printName("Michael");
 
-    // while loop
-    while (x < 2){
-        cout << x << endl;
-        x++;
-    }
-
-    // do while
-    x = 0;
-
-    do{
-        cout << x << endl;
-        x++;
-    } while (x < 2);                // executes once before evaluating this expression
-
-
-    // for loop
-    for (int i = 0; i < 10; i++){
-        cout << i << endl;
-    }
+    cout << volumeOfRectanglePrism(10, 2, 3) << endl;
 
     return 0;
 }
